@@ -42,7 +42,7 @@ module "aps1" {
 #  Genral environment variables
    env = var.env
    region = var.aps1_region 
-#  ec2_key_name = var.ec2_key_name
+   ec2_key_name = var.ec2_key_name
    instance_type = var.instance_type
    
    vpc_cidr_block  = var.vpc_cidr_block
