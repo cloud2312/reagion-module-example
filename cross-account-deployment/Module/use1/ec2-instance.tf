@@ -10,7 +10,7 @@ resource "aws_instance" "ec2_linux_01" {
   vpc_security_group_ids = [aws_security_group.linux_security_group.id]
 #  subnet_id              = data.aws_subnet.private_subnet1.id
   subnet_id              =  aws_subnet.private_app_subnet_az1.id
-  key_name               = var.ec2_key_name
+#  key_name               = var.ec2_key_name
   user_data = "#!/bin/bash \n hostnamectl set-hostname test-instance \n reboot \n"
   metadata_options {
     http_endpoint = "enabled"
@@ -43,7 +43,7 @@ resource "aws_instance" "ec2_linux_02" {
   vpc_security_group_ids = [aws_security_group.linux_security_group.id]
 #  subnet_id              = data.aws_subnet.private_subnet2.id
   subnet_id              = aws_subnet.private_app_subnet_az2.id
-  key_name               = var.ec2_key_name
+  key_name               = var.ec2_key_name   # keyname must be present on destination reagion or account
   user_data = "#!/bin/bash \n hostnamectl set-hostname test-instance2 \n reboot \n"
   metadata_options {
     http_endpoint = "enabled"

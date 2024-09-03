@@ -2,7 +2,7 @@ variable "use1_region" {}
 variable "euw1_region" {}
 variable "aps1_region" {}
 variable "env" {}
-variable "ec2_key_name" {}
+variable "ec2_key_name" {}    # keyname must be present on destination reagion or account
 variable "instance_type" {
     default = "t2.micro"
     description = "ec2 instance type"

@@ -7,7 +7,7 @@ module "use1" {
 #  Genral environment variables
    env = var.env
    region = var.use1_region 
-   ec2_key_name = var.ec2_key_name
+   ec2_key_name = var.ec2_key_name    # keyname must be present on destination reagion or account
    instance_type = var.instance_type
 
   vpc_cidr_block  = var.vpc_cidr_block
@@ -25,7 +25,7 @@ module "euw1" {
 #  Genral environment variables
    env = var.env
    region = var.euw1_region 
-   ec2_key_name = var.ec2_key_name
+   ec2_key_name = var.ec2_key_name   # keyname must be present on destination reagion or account
    instance_type = var.instance_type
    
    vpc_cidr_block  = var.vpc_cidr_block
@@ -42,7 +42,7 @@ module "aps1" {
 #  Genral environment variables
    env = var.env
    region = var.aps1_region 
-   ec2_key_name = var.ec2_key_name
+#  ec2_key_name = var.ec2_key_name
    instance_type = var.instance_type
    
    vpc_cidr_block  = var.vpc_cidr_block
